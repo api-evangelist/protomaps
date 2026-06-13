@@ -1,0 +1,47 @@
+name: Protomaps Rate Limits
+description: Rate limits and usage policies for the Protomaps hosted tile API.
+url: https://protomaps.com/api
+created: 2026-06-13
+modified: 2026-06-13
+
+limits:
+
+  - name: Monthly Tile Request Soft Cap
+    description: Soft cap on tile requests per month for all hosted API accounts. Applies to all tiers (free and commercial).
+    type: soft
+    quota: 1000000
+    unit: requests
+    period: month
+    enforcement: soft
+    notes: Not a hard cutoff; behavior above this threshold is not explicitly published. Users exceeding the cap are encouraged to self-host.
+
+  - name: Maximum Zoom Level
+    description: The hosted API serves tiles up to zoom level 15. No tiles are served beyond this zoom.
+    type: hard
+    quota: 15
+    unit: zoom-level
+    period: per-request
+    enforcement: hard
+
+  - name: CORS Restrictions
+    description: Browser requests must include a valid Origin header that matches the allowlist configured for the API key. Localhost requests with a valid API key are exempt.
+    type: policy
+    enforcement: hard
+
+  - name: API Key Required
+    description: All requests to api.protomaps.com require a valid API key passed as a query parameter.
+    type: policy
+    enforcement: hard
+    parameter: key
+    example: "https://api.protomaps.com/tiles/v4/{z}/{x}/{y}.mvt?key=MY_KEY"
+
+  - name: Usage History Window
+    description: Usage data is available across all keys for the last 90 days via the account dashboard.
+    type: observability
+    period: 90-days
+
+policies:
+  - Non-commercial use: free, no sponsorship required
+  - Commercial use: requires active GitHub Sponsorship at $14/month or higher
+  - Users exceeding limits should consider self-hosting via PMTiles on cloud storage
+  - FAQ available at https://protomaps.com/api for details on overage handling

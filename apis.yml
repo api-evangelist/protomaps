@@ -1,0 +1,127 @@
+aid: protomaps
+name: Protomaps
+description: >
+  Protomaps is an open-source map system that delivers an interactive map of the world as a
+  single PMTiles file hosted on cloud storage. It provides a hosted vector tile API powered by
+  Cloudflare CDN, plus tools for converting, serving, and delivering map tiles without servers
+  using HTTP range requests. The PMTiles format enables self-hosting on S3, Cloudflare R2,
+  Azure Blob, and Google Cloud Storage at a fraction of the cost of commercial map APIs.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/protomaps/refs/heads/main/apis.yml
+created: 2026-06-13
+modified: 2026-06-13
+specificationVersion: "0.19"
+tags:
+  - Maps
+  - Tiles
+  - Geospatial
+  - PMTiles
+  - Vector Tiles
+  - Open Source
+  - Self-Hosted
+  - OpenStreetMap
+
+apis:
+
+  - name: Protomaps Hosted Tile API
+    description: >
+      CDN-backed hosted basemap tile API serving OpenStreetMap-derived vector tiles in MVT format.
+      Provides Style JSON, TileJSON, and ZXY tile endpoints. Free for non-commercial use;
+      commercial use requires GitHub Sponsorship. API keys required for all requests.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://protomaps.com/api
+    baseURL: https://api.protomaps.com
+    tags:
+      - Maps
+      - Vector Tiles
+      - Basemap
+      - CDN
+    properties:
+      - type: Documentation
+        url: https://docs.protomaps.com
+      - type: OpenAPI
+        url: https://protomaps.com/api
+    contact:
+      - FN: Protomaps
+        email: hi@protomaps.com
+        url: https://protomaps.com
+
+  - name: PMTiles CLI
+    description: >
+      Single-binary command-line tool for working with PMTiles archives. Supports show, tile,
+      verify, extract, merge, serve, convert, cluster, upload, and edit operations. Can serve
+      PMTiles as a ZXY tile endpoint via HTTP. Works with local files and remote cloud storage
+      (S3, Azure Blob, Google Cloud Storage, Cloudflare R2).
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.protomaps.com/pmtiles/cli
+    baseURL: https://github.com/protomaps/go-pmtiles/releases
+    tags:
+      - CLI
+      - PMTiles
+      - Tools
+      - Self-Hosted
+    properties:
+      - type: Documentation
+        url: https://docs.protomaps.com/pmtiles/cli
+      - type: GitHubRepository
+        url: https://github.com/protomaps/go-pmtiles
+    contact:
+      - FN: Protomaps
+        email: hi@protomaps.com
+        url: https://protomaps.com
+
+  - name: Protomaps Basemap Downloads
+    description: >
+      Daily OpenStreetMap planet builds in PMTiles format available for download and self-hosting.
+      Provides the full planet tileset as well as tools for extracting regional subsets by
+      bounding box or GeoJSON region at any zoom level.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://maps.protomaps.com/builds
+    baseURL: https://build.protomaps.com
+    tags:
+      - Maps
+      - OpenStreetMap
+      - Downloads
+      - PMTiles
+      - Self-Hosted
+    properties:
+      - type: Documentation
+        url: https://docs.protomaps.com/basemaps/downloads
+    contact:
+      - FN: Protomaps
+        email: hi@protomaps.com
+        url: https://protomaps.com
+
+common:
+
+  - type: Website
+    url: https://protomaps.com
+
+  - type: Documentation
+    url: https://docs.protomaps.com
+
+  - type: GitHubOrg
+    url: https://github.com/protomaps
+
+  - type: Blog
+    url: https://protomaps.com/blog
+
+  - type: Pricing
+    url: https://github.com/sponsors/protomaps
+
+  - type: X
+    url: https://twitter.com/protomaps
+
+  - type: Plans
+    url: plans/protomaps-plans-pricing.yml
+
+  - type: RateLimits
+    url: rate-limits/protomaps-rate-limits.yml
+
+  - type: FinOps
+    url: finops/protomaps-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

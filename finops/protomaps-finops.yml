@@ -1,0 +1,84 @@
+name: Protomaps FinOps
+description: Financial operations guidance for using Protomaps hosted API and self-hosted PMTiles deployments.
+url: https://docs.protomaps.com/deploy/cost
+created: 2026-06-13
+modified: 2026-06-13
+
+cost_model:
+  type: hybrid
+  description: >
+    Protomaps uses a hybrid cost model. The hosted API is funded via GitHub Sponsorship at a flat
+    monthly rate rather than consumption-based pricing. For self-hosted deployments, costs are
+    passed directly to the user's cloud provider at infrastructure rates, which are significantly
+    lower than commercial map APIs.
+
+hosted_api:
+  monthly_cost_commercial: 14
+  currency: USD
+  unit: month
+  cap: 1000000 tile requests/month
+  sponsor_url: https://github.com/sponsors/protomaps
+
+self_hosted_comparison:
+  reference_workload:
+    monthly_tile_requests: 625000
+    outgoing_bandwidth_gb: 1000
+  providers:
+    - name: Google Maps Platform
+      monthly_cost_usd: 3640
+    - name: Hosted Map API (generic)
+      monthly_cost_usd: 1875
+    - name: Protomaps on AWS
+      monthly_cost_usd: 119.56
+      components:
+        - CloudFront GET Requests: "$0.009 per 10,000"
+        - CloudFront Bandwidth to Internet: "$0.10 per GB"
+        - Lambda invocations: "$0.60 per 1,000,000"
+        - S3 Storage: "$0.023 per GB"
+        - cache_hit_rate_assumption: 50%
+    - name: Protomaps on Cloudflare R2
+      monthly_cost_usd: 11.45
+      components:
+        - Workers invocations: "$0.30 per million"
+        - Workers Paid Plan base: "$5.00/month"
+        - R2 object retrieval: "$0.36 per million"
+        - R2 storage: "$0.015 per GB"
+
+cost_optimization:
+  strategies:
+    - name: Self-host on Cloudflare R2
+      description: Most cost-effective option. Cloudflare R2 has no egress fees, making it ideal for high-traffic deployments.
+      savings: Up to 30-300x cheaper than commercial map APIs
+      docs: https://docs.protomaps.com/deploy/cloudflare
+
+    - name: Self-host on AWS CloudFront + S3
+      description: Good option for teams already on AWS. Leverage CloudFront caching to minimize S3 and Lambda costs.
+      docs: https://docs.protomaps.com/deploy/aws
+
+    - name: Self-host on Google Cloud CDN + GCS
+      description: Option for teams on Google Cloud. Use GCS for storage and Cloud CDN for delivery.
+      docs: https://docs.protomaps.com/deploy/google-cloud
+
+    - name: Self-host on Azure
+      description: Option for teams on Azure infrastructure.
+      docs: https://docs.protomaps.com/deploy/azure
+
+    - name: Extract regional PMTiles
+      description: >
+        Instead of hosting the entire planet (110+ GB), extract only the geographic region you need
+        using the pmtiles CLI extract command. Reduces storage costs and speeds up initial uploads.
+      docs: https://docs.protomaps.com/pmtiles/cli
+
+    - name: Use daily planet builds
+      description: >
+        Protomaps provides daily OpenStreetMap planet builds at maps.protomaps.com/builds so you
+        don't need to run your own tile generation pipeline.
+      url: https://maps.protomaps.com/builds
+
+  cost_calculator: https://docs.protomaps.com/deploy/cost
+
+notes:
+  - Protomaps is not SaaS and has stated this explicitly to keep focus on the open source mission.
+  - The $14/month GitHub Sponsorship tier is designed to offset CDN infrastructure costs, not to generate profit.
+  - Users with high traffic (>1M tiles/month) are encouraged to self-host rather than upgrade.
+  - Open source cost calculator code is available on GitHub.

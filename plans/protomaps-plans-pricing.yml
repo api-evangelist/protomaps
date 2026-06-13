@@ -1,0 +1,64 @@
+name: Protomaps Plans and Pricing
+description: Pricing and sponsorship tiers for Protomaps hosted tile API and support services.
+url: https://protomaps.com/api
+created: 2026-06-13
+modified: 2026-06-13
+
+plans:
+
+  - name: Free (Non-Commercial)
+    description: Free access to the Protomaps hosted basemap tile API for non-commercial use only, powered by Cloudflare CDN.
+    url: https://protomaps.com/api
+    price: 0
+    unit: month
+    currency: USD
+    features:
+      - API key required for all requests
+      - Up to 1,000,000 tile requests per month (soft cap)
+      - CDN-cached vector tiles via Cloudflare
+      - Access to Style JSON, TileJSON, and ZXY tile endpoints
+      - CORS restrictions configurable per API key
+      - Localhost development exempt from CORS
+      - Non-commercial use only
+
+  - name: Commercial SaaS (GitHub Sponsor)
+    description: Commercial use of api.protomaps.com for SaaS products, funded through GitHub Sponsorship. Includes project roadmap access via Insiders repository.
+    url: https://github.com/sponsors/protomaps
+    price: 14
+    unit: month
+    currency: USD
+    features:
+      - Commercial use of api.protomaps.com
+      - Up to 1,000,000 tile requests per month
+      - Access to Insiders repository with project roadmap
+      - Sponsor badge on GitHub profile
+
+  - name: Protomaps Access (Enterprise Support)
+    description: Enterprise tier with direct consulting and architecture support from the project author.
+    url: https://github.com/sponsors/protomaps
+    price: 2000
+    unit: month
+    currency: USD
+    features:
+      - Project author joins your Slack or Teams workspace
+      - Geospatial architecture consulting
+      - 24-hour response time for support requests
+      - All Commercial SaaS tier benefits
+
+  - name: Protomaps Access+ (Priority Development)
+    description: Highest enterprise tier with prioritized open source roadmap development, custom builds, and regular standups.
+    url: https://github.com/sponsors/protomaps
+    price: 4000
+    unit: month
+    currency: USD
+    features:
+      - Prioritized development of open source roadmap features
+      - Custom branches and build automation for tilesets
+      - Regular check-ins and standups
+      - All Protomaps Access tier benefits
+
+notes:
+  - Protomaps is explicitly not a SaaS product; the hosted API is maintained to fund open source development.
+  - Heavy users are encouraged to self-host via PMTiles on cloud storage (S3, Cloudflare R2, Azure, GCS).
+  - Self-hosting can reduce costs by 30-300x compared to commercial map tile APIs.
+  - Cost calculator available at https://docs.protomaps.com/deploy/cost

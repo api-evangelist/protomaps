@@ -1,0 +1,58 @@
+{
+  "provider": "protomaps",
+  "name": "Protomaps Blog",
+  "url": "https://protomaps.com/blog",
+  "fetched": "2026-06-13",
+  "posts": [
+    {
+      "title": "New CLI feature: pmtiles merge",
+      "url": "https://protomaps.com/blog/pmtiles-merge-part-1/",
+      "date": "2025-12-16"
+    },
+    {
+      "title": "Mapterhorn - Terrain for Web Mapping",
+      "url": "https://protomaps.com/blog/mapterhorn-terrain/",
+      "date": "2025-09-02"
+    },
+    {
+      "title": "A Tour of the New pmtiles.io",
+      "url": "https://protomaps.com/blog/new-pmtiles-io/",
+      "date": "2025-05-15"
+    },
+    {
+      "title": "Covering the Planet with Compressed Bitmaps",
+      "url": "https://protomaps.com/blog/pmtiles-compressed-bitmaps/",
+      "date": "2025-01-27"
+    },
+    {
+      "title": "What is a basemap, anyway?",
+      "url": "https://protomaps.com/blog/what-is-a-basemap/",
+      "date": "2025-01-20"
+    },
+    {
+      "title": "Slicing OpenStreetMap Just Got Fresher",
+      "url": "https://protomaps.com/blog/slicing-openstreetmap-just-got-fresher/",
+      "date": "2024-11-29"
+    },
+    {
+      "title": "PMTiles on More Platforms",
+      "url": "https://protomaps.com/blog/pmtiles-more-platforms/",
+      "date": "2024-10-28"
+    },
+    {
+      "title": "You Might Not Want PMTiles",
+      "url": "https://protomaps.com/blog/you-might-not-want-pmtiles/",
+      "date": "2024-05-22"
+    },
+    {
+      "title": "Protomaps receives NLnet open source grant",
+      "url": "https://protomaps.com/blog/nlnet-grant/",
+      "date": "2024-02-21"
+    },
+    {
+      "title": "Transitioning Protomaps from Open Core to Open Source",
+      "url": "https://protomaps.com/blog/open-core-to-open-source/",
+      "date": "2024-02-16"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "protomaps": "https://protomaps.com/vocab#",
+    "pmtiles": "https://pmtiles.io/vocab#",
+    "aid": "https://apis.io/vocab#aid",
+    "humanURL": "https://apis.io/vocab#humanURL",
+    "baseURL": "https://apis.io/vocab#baseURL",
+    "specificationVersion": "https://apis.io/vocab#specificationVersion",
+    "PMTiles": "pmtiles:PMTiles",
+    "VectorTile": "protomaps:VectorTile",
+    "TileJSON": "protomaps:TileJSON",
+    "StyleJSON": "protomaps:StyleJSON",
+    "MVT": "protomaps:MVT",
+    "ZXY": "protomaps:ZXY",
+    "basemap": "protomaps:basemap",
+    "cloudStorage": "protomaps:cloudStorage",
+    "selfHosted": "protomaps:selfHosted",
+    "openSourceMap": "protomaps:openSourceMap"
+  },
+  "@type": "WebAPI",
+  "@id": "https://protomaps.com",
+  "name": "Protomaps",
+  "description": "Protomaps is an open-source map system that delivers an interactive map of the world as a single PMTiles file hosted on cloud storage. It provides a hosted vector tile API powered by Cloudflare CDN, plus tools for converting, serving, and delivering map tiles without servers using HTTP range requests.",
+  "url": "https://protomaps.com",
+  "aid": "protomaps",
+  "documentation": "https://docs.protomaps.com",
+  "termsOfService": "https://protomaps.com",
+  "provider": {
+    "@type": "Organization",
+    "name": "Protomaps",
+    "url": "https://protomaps.com",
+    "email": "hi@protomaps.com",
+    "sameAs": [
+      "https://github.com/protomaps",
+      "https://twitter.com/protomaps"
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "Free for non-commercial use; commercial use requires GitHub Sponsorship",
+    "url": "https://github.com/sponsors/protomaps"
+  },
+  "hasPart": [
+    {
+      "@type": "WebAPI",
+      "name": "Protomaps Hosted Tile API",
+      "description": "CDN-backed hosted basemap tile API serving OpenStreetMap-derived vector tiles in MVT format.",
+      "url": "https://api.protomaps.com",
+      "humanURL": "https://protomaps.com/api",
+      "endpointURL": "https://api.protomaps.com",
+      "documentation": "https://docs.protomaps.com",
+      "additionalType": "VectorTile",
+      "keywords": ["maps", "vector-tiles", "basemap", "CDN", "MVT", "TileJSON", "StyleJSON"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "PMTiles CLI",
+      "description": "Single-binary command-line tool for working with PMTiles archives.",
+      "url": "https://docs.protomaps.com/pmtiles/cli",
+      "applicationCategory": "DeveloperApplication",
+      "codeRepository": "https://github.com/protomaps/go-pmtiles",
+      "keywords": ["CLI", "PMTiles", "tools", "self-hosted"]
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Protomaps Basemap Downloads",
+      "description": "Daily OpenStreetMap planet builds in PMTiles format available for download and self-hosting.",
+      "url": "https://maps.protomaps.com/builds",
+      "contentUrl": "https://build.protomaps.com",
+      "encodingFormat": "application/vnd.pmtiles",
+      "keywords": ["maps", "OpenStreetMap", "downloads", "PMTiles", "self-hosted"]
+    }
+  ],
+  "keywords": [
+    "maps",
+    "tiles",
+    "geospatial",
+    "PMTiles",
+    "vector-tiles",
+    "open-source",
+    "self-hosted",
+    "OpenStreetMap"
+  ]
+}

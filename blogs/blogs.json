@@ -2,7 +2,7 @@
   "provider": "protomaps",
   "name": "Protomaps Blog",
   "url": "https://protomaps.com/blog",
-  "fetched": "2026-06-13",
+  "fetched": "2026-06-14T20:42:17Z",
   "posts": [
     {
       "title": "New CLI feature: pmtiles merge",
@@ -54,5 +54,16 @@
       "url": "https://protomaps.com/blog/open-core-to-open-source/",
       "date": "2024-02-16"
     }
-  ]
+  ],
+  "repo": "protomaps",
+  "feeds": [
+    {
+      "source": "https://github.com/protomaps",
+      "feed_url": "https://github.com/protomaps",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0
 }

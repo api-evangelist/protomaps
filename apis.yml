@@ -7,7 +7,7 @@ description: >
   using HTTP range requests. The PMTiles format enables self-hosting on S3, Cloudflare R2,
   Azure Blob, and Google Cloud Storage at a fraction of the cost of commercial map APIs.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/protomaps/refs/heads/main/apis.yml
 created: 2026-06-13
 modified: 2026-06-13
@@ -29,7 +29,7 @@ apis:
       CDN-backed hosted basemap tile API serving OpenStreetMap-derived vector tiles in MVT format.
       Provides Style JSON, TileJSON, and ZXY tile endpoints. Free for non-commercial use;
       commercial use requires GitHub Sponsorship. API keys required for all requests.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://protomaps.com/api
     baseURL: https://api.protomaps.com
     tags:
@@ -53,7 +53,7 @@ apis:
       verify, extract, merge, serve, convert, cluster, upload, and edit operations. Can serve
       PMTiles as a ZXY tile endpoint via HTTP. Works with local files and remote cloud storage
       (S3, Azure Blob, Google Cloud Storage, Cloudflare R2).
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.protomaps.com/pmtiles/cli
     baseURL: https://github.com/protomaps/go-pmtiles/releases
     tags:
@@ -76,7 +76,7 @@ apis:
       Daily OpenStreetMap planet builds in PMTiles format available for download and self-hosting.
       Provides the full planet tileset as well as tools for extracting regional subsets by
       bounding box or GeoJSON region at any zoom level.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://maps.protomaps.com/builds
     baseURL: https://build.protomaps.com
     tags:

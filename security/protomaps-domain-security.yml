@@ -1,0 +1,26 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: protomaps.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  2 05:47:55 2026 GMT
+  hsts: false
+- host: api.protomaps.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  8 08:01:10 2026 GMT
+  hsts: null
+- host: docs.protomaps.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  3 00:51:00 2026 GMT
+  hsts: false
+domains:
+- domain: protomaps.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

@@ -95,6 +95,8 @@ apis:
 
 common:
 
+  - type: DomainSecurity
+    url: security/protomaps-domain-security.yml
   - type: Website
     url: https://protomaps.com
 

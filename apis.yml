@@ -7,7 +7,19 @@ description: >
   using HTTP range requests. The PMTiles format enables self-hosting on S3, Cloudflare R2,
   Azure Blob, and Google Cloud Storage at a fraction of the cost of commercial map APIs.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/protomaps.png
 url: https://raw.githubusercontent.com/api-evangelist/protomaps/refs/heads/main/apis.yml
 created: 2026-06-13
 modified: 2026-06-13

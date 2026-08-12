@@ -107,6 +107,9 @@ apis:
 
 common:
 
+  - type: License
+    name: BSD-3-Clause
+    url: https://github.com/protomaps/go-pmtiles/blob/main/LICENSE
   - type: DomainSecurity
     url: security/protomaps-domain-security.yml
   - type: Website

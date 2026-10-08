@@ -67,3 +67,40 @@ notes:
   - Heavy users are encouraged to self-host via PMTiles on cloud storage (S3, Cloudflare R2, Azure, GCS).
   - Self-hosting can reduce costs by 30-300x compared to commercial map tile APIs.
   - Cost calculator available at https://docs.protomaps.com/deploy/cost
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units:
+  - period
+  plans:
+  - name: Free (Non-Commercial)
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Commercial SaaS (GitHub Sponsor)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Protomaps Access (Enterprise Support)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Protomaps Access+ (Priority Development)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods: []

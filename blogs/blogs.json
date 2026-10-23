@@ -9,6 +9,13 @@
       "method": "discovered"
     },
     {
+      "source": "https://protomaps.com/blog/atom.xml",
+      "feed_url": "https://protomaps.com/blog/atom.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://protomaps.com/blog/index.xml",
       "feed_url": "https://protomaps.com/blog/index.xml",
       "title": "",
@@ -23,7 +30,7 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-10-10T13:15:00Z",
+  "fetched": "2026-10-17T14:53:57Z",
   "post_count": 21,
   "feed_nature": "vendor-blog",
   "feed_nature_basis": "path_blog",
